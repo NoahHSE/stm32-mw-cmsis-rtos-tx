@@ -203,12 +203,10 @@ static uint8_t *MemAlloc(uint32_t mem_size, uint8_t pool_type)
 }
 
 /**
-  * @brief  The function MemFree allocates thread, timer, mutex, semaphore,
-  *         event flags and message queue block object memory.
-  *         Or it allocates the thread or message queue stack memory.
-  * @param  [in] memory size to be allocated from BytePool
-  *         [in] to be allocated memory type (Heap or Stack)
-  * @retval pointer to the allocated memory or NULL in case of error.
+  * @brief  This function returns previously allocated memory to its 
+  *         associated memory byte pool.
+  * @param  [in] pointer to allocated memory
+  * @retval status code that indicates the execution status of the function.
   */
 static osStatus_t MemFree(VOID *memory_ptr)
 {
